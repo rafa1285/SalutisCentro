@@ -1,0 +1,57 @@
+<?xml version="1.0" encoding="UTF-8" ?> 
+<!DOCTYPE tiles-definitions PUBLIC       
+	"-//Apache Software Foundation//DTD Tiles Configuration 2.0//EN"       
+	"http://tiles.apache.org/dtds/tiles-config_2_0.dtd">
+<tiles-definitions>
+    <definition name="baseLayout" template="/tiles/layout.jsp">
+        <put-attribute name="header" value="/tiles/header.jsp" />
+        <put-attribute name="body" value="" />
+        <put-attribute name="footer" value="/tiles/footer.jsp" />
+    </definition>
+    
+    <definition name="loginLayout" template="/tiles/layout.jsp">
+    <put-attribute name="header" value="" />
+        <put-attribute name="body" value="" />
+        <put-attribute name="footer" value="/tiles/footer.jsp" />
+    </definition>
+    
+    <!-- Establecemos nuevos nombres asociados a las rutas de las listas o formularios, para crearles las vistas -->
+    <definition name="login.form" extends="loginLayout">
+        <put-attribute name="body" value="/login/form.jsp" />
+    </definition>
+    <definition name="inicio.form" extends="baseLayout">
+        <put-attribute name="body" value="/inicio.jsp" />
+    </definition>
+     <definition name="paciente.form" extends="baseLayout">
+        <put-attribute name="body" value="/paciente/form.jsp" />
+    </definition>
+        <definition name="paciente.list" extends="baseLayout">
+        <put-attribute name="body" value="/paciente/list.jsp" />
+    </definition>
+      <definition name="terapeuta.form" extends="baseLayout">
+        <put-attribute name="body" value="/terapeuta/form.jsp" />
+    </definition>
+       <definition name="terapeuta.list" extends="baseLayout">
+        <put-attribute name="body" value="/terapeuta/list.jsp" />
+    </definition>
+    <definition name="cita.form" extends="baseLayout">
+        <put-attribute name="body" value="/cita/form.jsp" />
+    </definition>
+    <definition name="cita.list" extends="baseLayout">
+        <put-attribute name="body" value="/cita/list.jsp" />
+    </definition>
+    <definition name="usuario.form" extends="baseLayout">
+        <put-attribute name="body" value="/usuario/form.jsp" />
+    </definition>
+	<definition name="diagnostico.form" extends="baseLayout">
+        <put-attribute name="body" value="/diagnostico/form.jsp" />
+    </definition>
+    <definition name="diagnostico.list" extends="baseLayout">
+        <put-attribute name="body" value="/diagnostico/list.jsp" />
+    </definition>
+
+    <definition name="error" extends="baseLayout">
+        <put-attribute name="body" value="/error.jsp" />
+    </definition>
+    
+</tiles-definitions>
